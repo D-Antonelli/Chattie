@@ -1,0 +1,19 @@
+{
+  "name": "chattie",
+  "version": "1.0.0",
+  "description": "My first experiment with building a chatbot and deploying it to VPS.",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/D-Antonelli/Chattie.git"
+  },
+  "author": "Derya Antonelli",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/D-Antonelli/Chattie/issues"
+  },
+  "homepage": "https://github.com/D-Antonelli/Chattie#readme"
+}
