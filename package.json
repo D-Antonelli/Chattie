@@ -15,5 +15,8 @@
   "bugs": {
     "url": "https://github.com/D-Antonelli/Chattie/issues"
   },
-  "homepage": "https://github.com/D-Antonelli/Chattie#readme"
+  "homepage": "https://github.com/D-Antonelli/Chattie#readme",
+  "dependencies": {
+    "express": "^4.18.2"
+  }
 }
