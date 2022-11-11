@@ -4,10 +4,8 @@ const path = require('path')
 
 const port = 3000;
 
-app.use(express.static(path.join(__dirname, 'ui')));
-
 app.get('/', (req, res) => {
-    console.log("Hello world")
+    res.sendFile(path.join(__dirname+'/ui/index.html'))
 })
 
 app.listen(port, () => {
