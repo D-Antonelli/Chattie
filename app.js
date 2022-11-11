@@ -1,13 +1,13 @@
 const express = require("express");
 const app = express();
+const path = require('path')
 
 const port = 3000;
 
-// TODO
-// Serve static file ->HTML
+app.use(express.static(path.join(__dirname, 'ui')));
 
 app.get('/', (req, res) => {
-    res.send('Hello World!')
+    console.log("Hello world")
 })
 
 app.listen(port, () => {
