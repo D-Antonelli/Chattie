@@ -13,6 +13,10 @@ const port = 3000;
         res.sendFile(path.join(__dirname+'/ui/index.html'))
     })
 
+    server.listen(port, function() {
+        console.log((new Date()) + ' Server is listening on port ' + port);
+    });
+
 wsServer = new WebSocketServer({
     httpServer: server,
     // You should not use autoAcceptConnections for production
@@ -53,6 +57,3 @@ wsServer.on('request', function(request) {
     });
 });
 
-server.listen(port, function() {
-    console.log((new Date()) + ' Server is listening on port ' + port);
-});
