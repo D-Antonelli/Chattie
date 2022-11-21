@@ -4,6 +4,11 @@ const path = require('path')
 var WebSocketServer = require('websocket').server
 var http = require('http');
 
+
+// TODO:
+// Connect client
+
+
 // create a chatbot using websockets
 const port = 3000;
 
