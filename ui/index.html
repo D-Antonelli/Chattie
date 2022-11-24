@@ -1,13 +1,33 @@
 <!DOCTYPE html>
 <html>
-    <head>
-        <title>Chatty: Web chat</title>
-    </head>
-    <body>
-        <p>Do you have a problem?</p>
-        <button>YES</button>
-        <button>NO</button>
-        <!-- <input class="writechat" placeholder="Tell me what's your problem"> -->
-        <!-- <div class="output"></div> -->
-    </body>
+  <head>
+    <title>Chatty: Web chat</title>
+  </head>
+  <body>
+    <p>Do you have a problem?</p>
+    <button class="btn-yes">YES</button>
+    <button class="btn-no">NO</button>
+    <div class="output"></div>
+  </body>
+  <script>
+    // Create WebSocket connection.
+    const socket = new WebSocket("ws://localhost:3000");
+
+    // Connection opened
+    socket.addEventListener("open", (event) => {
+        socket.send("Y'ello")
+        console.log("open")
+    });
+
+    // Listen for messages
+    socket.addEventListener("message", (event) => {
+      console.log("Message from server ", event.data);
+    });
+
+    let btnYes = document.querySelector(".btn-yes");
+    let btnNo = document.querySelector(".btn-no");
+    let output = document.querySelector(".output");
+
+    btnYes.addEventListener("click", (e) => {});
+  </script>
 </html>
