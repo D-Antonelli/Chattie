@@ -16,12 +16,15 @@ const port = 3000;
         ws.send("Welcome!")
         ws.on('message', function incoming(message) {
             console.log("received " + message)
-            ws.send("Hey!")
+            ws.send("Whazzup!")
         })
     })
 
+    // Serve js files
+    app.use('/js', express.static(path.join(__dirname, 'ui/js/')));
+
     app.get('/', (req, res) => {
-        res.sendFile(path.join(__dirname+'/ui/index.html'))
+        res.sendFile(path.join(__dirname+'/ui/html/index.html'))
     })
 
     server.listen(port, function() {
