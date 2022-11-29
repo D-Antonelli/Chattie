@@ -1,8 +1,8 @@
 let output = document.querySelector(".output");
 let input = document.querySelector(".input");
-// Create WebSocket connection.
+
 const socket = new WebSocket("ws://localhost:3000");
-// console.log("hello socket");
+
 // Connection opened
 // socket.addEventListener("open", (event) => {
 //   socket.send("Y'ello");
